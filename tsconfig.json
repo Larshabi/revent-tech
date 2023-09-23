@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",                               
+    "rootDir": "./src",
+    "outDir": "./dist",                                   
+    "esModuleInterop": true, 
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "node",                                        
+    "strict": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./node_module/@types",
+      "./src/types"
+    ], 
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
