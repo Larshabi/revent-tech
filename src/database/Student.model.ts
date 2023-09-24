@@ -1,4 +1,4 @@
-import { DataTypes, Model, InferAttributes, InferCreationAttributes, CreationOptional } from "sequelize";
+import { DataTypes } from "sequelize";
 import { sequelize } from ".";
 
 

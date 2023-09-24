@@ -3,14 +3,20 @@ import Classroom from "../database/Classroom.model";
 
 const ClassroomController = {
   async create(req: Request, res: Response) {
-    let { name, teacherId } = req.body;
+    const { name, teacherId } = req.body;
     if (!name) {
       return res.status(400).json({
         status: "error",
         message: "Name of classroom is required",
       });
     }
-    const classroom = await Classroom.create({
+    let classroom = await Classroom.findOne({where:{name}})
+    if(classroom){
+      return res.status(400).json({
+        message:'Class with name already exists'
+      })
+    }
+    classroom = await Classroom.create({
       name,
       teacherId,
     });

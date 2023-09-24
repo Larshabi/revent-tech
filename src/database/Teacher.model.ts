@@ -1,10 +1,4 @@
-import {
-  DataTypes,
-  Model,
-  InferAttributes,
-  InferCreationAttributes,
-  CreationOptional,
-} from "sequelize";
+import { DataTypes } from "sequelize";
 import { sequelize } from ".";
 import Classroom from "./Classroom.model";
 const Teacher = sequelize.define("Teacher", {

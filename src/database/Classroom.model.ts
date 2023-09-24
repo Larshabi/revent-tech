@@ -1,10 +1,4 @@
-import {
-  DataTypes,
-  Model,
-  InferAttributes,
-  InferCreationAttributes,
-  CreationOptional,
-} from "sequelize";
+import { DataTypes } from "sequelize";
 import { sequelize } from ".";
 import Student from "./Student.model";
 
@@ -15,7 +9,7 @@ const Classroom = sequelize.define("Classroom", {
   },
   name: {
     type: DataTypes.STRING,
-    unique: true
+    unique: true,
   },
 });
 

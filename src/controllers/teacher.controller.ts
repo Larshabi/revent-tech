@@ -43,12 +43,12 @@ const TeacherController = {
   },
 
   async listTeachers(req: Request, res: Response) {
-    console.log("Hi");
     const teachers = await Teacher.findAll();
     return res.status(200).json({
       teachers,
     });
   },
+
   async getStudents(req: Request, res: Response) {
     const { teacherId } = req.params;
     let classrooms = await Classroom.findAll({ where: { teacherId } });
